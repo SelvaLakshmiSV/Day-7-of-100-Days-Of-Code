@@ -31,7 +31,7 @@ int main()
       printf("I am Saturday");
       break;
      default: 
-      printf("I am default case."); 
+      printf("I am default case.");[SelvaLakshmi.pdf](https://github.com/SelvaLakshmiSV/Day-7-of-100-Days-Of-Code/files/6370221/SelvaLakshmi.pdf)
   }
   return 0;
 }
