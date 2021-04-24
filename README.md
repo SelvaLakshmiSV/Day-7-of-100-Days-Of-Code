@@ -1,5 +1,5 @@
 # Day 7 of 100 Days Of Code
-###SWITCH STATEMENT
+### SWITCH STATEMENT
 ```
 #include<stdio.h>
 int main()
@@ -36,4 +36,68 @@ int main()
   return 0;
 }
 ```
--Suppose days == 1 codition is satisfied and there is no break then subsequent expression will also gets evaluvated until we reach the another break.
+- Suppose days == 1 codition is satisfied and there is no break then subsequent expression will also gets evaluvated until we reach the another break.
+# FACTS
+- You are not allowed to use dplicate cases
+```
+#include <stdio.h>
+int main()
+{
+  int number = 1;
+  switch(number):
+  {
+     case 1:
+       printf("I am 1");
+       break;
+     case 1:
+       printf("I am 1");
+       break;
+     case 2:
+       printf("I am 2");
+     default:
+       printf("Good bye!");
+   }  
+   return 0;
+}
+//Output:error : duplicate case value and error : previously used here
+```
+- Only those expressions are allowed in switch which result in an integral constant value.
+```
+#include <stdio.h>
+int main()
+{ 
+  int a = 5,b = 7,c = 10;
+  switch(a+b*c):
+  {
+     case 1:
+       printf("I am 1");
+       break;
+     case 2:
+       printf("I am 2");
+     default:
+       printf("Good bye!");
+   }  
+   return 0;
+}
+//Output: Good bye!
+```
+### ⚠️ NOT ALLOWED 
+```
+#include <stdio.h>
+int main()
+{ 
+  int a = 2.5,b = 7.2,c = 1.0;
+  switch(a+b*c):
+  {
+     case 1:
+       printf("I am 1");
+       break;
+     case 2:
+       printf("I am 2");
+     default:
+       printf("Good bye!");
+   }  
+   return 0;
+}
+//Output: error : switch quantity not an integer
+```
